@@ -30,6 +30,7 @@ Route::middleware([
     })->name('dashboard');
 });
 
+
 //Tags Routes
 Route::resource('tags',TagsController::class);
 
