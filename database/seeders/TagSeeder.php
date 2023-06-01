@@ -14,19 +14,19 @@ class TagSeeder extends Seeder
     {
         //
        // $slug=Str::slug()
-      DB::table('tags')->insert(
+      DB::table('tags')->insert([
       [
-            'slug'=>'computer-science',
+        'name'=>"computer science",
+          
+        'slug'=>'computer-science',
             'created_at'=>now(),
             'updated_at'=>now(),
         ],
         [
-            'name'=>'probability and statics',
-            'slug'=>"probability-and-statics",
-         [
-            'name'=>'computer science',
-           'created_at'=>now(),
-            'updated_at'=>now(),
+         'name'=>"probability and statics",
+         'slug'=>"probability-and-statics",
+         'created_at'=>now(),
+         'updated_at'=>now(),
         ],
         [
             'name'=>'Physics',
@@ -39,51 +39,9 @@ class TagSeeder extends Seeder
             'slug'=>"Biology",
             'created_at'=>now(),
             'updated_at'=>now(),
-        ],
-        [   'name'=>'Chemistry',
-            'slug'=>'Chemistry',
-            'created_at'=>now(),
-            'updated_at'=>now(),
 
-        ],
-        [
-            'name'=>'Data Analysis',
-            'slug'=>'Data-Analysis',
-            'created_at'=>now(),
-            'updated_at'=>now(),
-        ],
-        [
-            'name'=>'Python',
-            'slug'=>'Python',
-            'created_at'=>now(),
-            'updated_at'=>now(),
-        ],
-        [
-            'name'=>'Essays',
-            'slug'=>'Essays',
-            'created_at'=>now(),
-            'updated_at'=>now(),
-        ],
-        [
-            'name'=>'Javascript',
-            'slug'=>'Javascript',
-            'created_at'=>now(),
-            'updated_at'=>now(),
-        ],
-        [
-            'name'=>'website',
-            'slug'=>'website',
-            'created_at'=>now(),
-            'updated_at'=>now(),
-        ],
-        [   'name'=>'wordpress',
-            'slug'=>'wordpress',
-            'created_at'=>now(),
-            'updated_at'=>now(),
-        ],
 
-      ]
-      );
+      ]);
 
     }
 }
