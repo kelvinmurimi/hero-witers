@@ -17,7 +17,7 @@ class TagSeeder extends Seeder
       DB::table('tags')->insert([
       [
         'name'=>"computer science",
-          
+
         'slug'=>'computer-science',
             'created_at'=>now(),
             'updated_at'=>now(),
@@ -39,7 +39,13 @@ class TagSeeder extends Seeder
             'slug'=>"Biology",
             'created_at'=>now(),
             'updated_at'=>now(),
-
+        ],
+        [
+            'name'=>'python',
+            'slug'=>"python",
+            'created_at'=>now(),
+            'updated_at'=>now(),
+        ],
 
       ]);
 
