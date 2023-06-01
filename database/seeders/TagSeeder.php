@@ -39,7 +39,7 @@ class TagSeeder extends Seeder
             'slug'=>"Biology",
             'created_at'=>now(),
             'updated_at'=>now(),
-        ]
+
 
       ]);
 
