@@ -34,12 +34,7 @@ class TagSeeder extends Seeder
             'created_at'=>now(),
             'updated_at'=>now(),
         ],
-        [
-            'name'=>'Biology',
-            'slug'=>"Biology",
-            'created_at'=>now(),
-            'updated_at'=>now(),
-
+      
 
       ]);
 

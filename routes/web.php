@@ -1,7 +1,7 @@
 <?php
 use App\Http\Controllers;
 use App\Http\Controllers\TagsController;
-
+use App\Http\Controllers\catagories\CategoriesController;
 use Illuminate\Support\Facades\Route;
 
 
@@ -30,4 +30,8 @@ Route::middleware([
     })->name('dashboard');
 });
 
+//Tags Routes
 Route::resource('tags',TagsController::class);
+
+//Categories routes
+Route::resource('categories',CategoriesController::class);
