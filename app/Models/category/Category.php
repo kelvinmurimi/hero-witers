@@ -20,7 +20,7 @@ class Category extends Model
     }
 
     public function category_id(){
-        return $this->id; 
+        return $this->id;  
     }
 
     public function category_slug(){
