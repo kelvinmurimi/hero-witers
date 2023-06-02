@@ -31,18 +31,34 @@
     <!-- partial:./partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
+<<<<<<< HEAD
         <li class="nav-item">
             <a class="nav-link" href="{{route('tags.index')}}">
               <i class="mdi mdi-emoticon menu-icon"></i>
+=======
+       
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('profile.show') }}">
+              <i class="mdi mdi-account-circle"></i>::
+              <span class="menu-title">Profile</span>
+            </a>
+          </li>
+
+           <li class="nav-item">
+            <a class="nav-link" href="pages/icons/mdi.html">
+              <i class="mdi mdi-arrow-all"></i>::
+>>>>>>> 3fdc48e7fbdc9947ba4693a9ae1fc93d056ec893
               <span class="menu-title">Tags</span>
             </a>
           </li>
+
           <li class="nav-item">
-            <a class="nav-link" href="pages/icons/mdi.html">
-              <i class="mdi mdi-emoticon menu-icon"></i>
+            <a class="nav-link" href="{{ route('categories.index') }}">
+              <i class="mdi mdi-arrow-collapse-horizontal"></i>::
               <span class="menu-title">Categories</span>
             </a>
           </li>
+
       </ul>
     </nav>
     <!-- partial -->
@@ -60,8 +76,8 @@
           </button>-->
 
           <div class="navbar-brand-wrapper">
-            <a class="navbar-brand brand-logo" href="index.html"><img src="{{ Auth::user()->profile_photo_url }}" alt="logo" width="10%" style="border-radius:50%;" /></a>
-            <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ Auth::user()->profile_photo_url }}" alt="logo" width="10%" style="border-radius:50%;" /></a>
+            <a class="navbar-brand brand-logo" href="{{ route('profile.show') }}"><img src="{{ Auth::user()->profile_photo_url }}" alt="logo" width="10%" style="border-radius:50%;" /></a>
+            <a class="navbar-brand brand-logo-mini" href="{{ route('profile.show') }}"><img src="{{ Auth::user()->profile_photo_url }}" alt="logo" width="10%" style="border-radius:50%;" /></a>
           </div>
       @else
           <span class="inline-flex rounded-md">
@@ -87,7 +103,7 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="messageDropdown">
                 <p class="mb-0 font-weight-normal float-left dropdown-header">Messages</p>
-                <a class="dropdown-item preview-item">
+               <!-- <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
                       <img src="images/faces/face4.jpg" alt="image" class="profile-pic">
                   </div>
@@ -122,7 +138,7 @@
                       Upcoming board meeting
                     </p>
                   </div>
-                </a>
+                </a>-->
               </div>
             </li>
             <li class="nav-item dropdown mr-2">
@@ -132,7 +148,7 @@
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown preview-list" aria-labelledby="notificationDropdown">
                 <p class="mb-0 font-weight-normal float-left dropdown-header">Notifications</p>
-                <a class="dropdown-item preview-item">
+               <!-- <a class="dropdown-item preview-item">
                   <div class="preview-thumbnail">
                     <div class="preview-icon bg-success">
                       <i class="mdi mdi-information mx-0"></i>
@@ -170,7 +186,7 @@
                       2 days ago
                     </p>
                   </div>
-                </a>
+                </a>=-->
               </div>
             </li>
           </ul>
@@ -196,7 +212,7 @@
                     <img class="h-8 w-8 rounded-full object-cover" src="{{-- Auth::user()->profile_photo_url --}}" alt="{{-- Auth::user()->name --}}" />
                 </button>-->
                 <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" id="profileDropdown">
-                   <img src="{{ Auth::user()->profile_photo_url }}"  alt="logo"/></a>
+                   <img src="{{ Auth::user()->profile_photo_url }}"  alt="logo" style="border-radius: 50%;"/></a>
                     <span class="nav-profile-name">{{ Auth::user()->name }}</span>
                 </a>
 
@@ -213,39 +229,26 @@
             @endif
               </a>
               <div class="dropdown-menu dropdown-menu-right navbar-dropdown" aria-labelledby="profileDropdown">
-                <a class="dropdown-item">
+                <a class="dropdown-item" href="{{ route('profile.show') }}">
                   <i class="mdi mdi-settings text-primary"></i>
                   Settings
                 </a>
-                <a class="dropdown-item">
-                  <i class="mdi mdi-logout text-primary"></i>
-                  Logout
-                </a>
+              
               </div>
             </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link icon-link">
-                <i class="mdi mdi-plus-circle-outline"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link icon-link">
-                <i class="mdi mdi-web"></i>
-              </a>
-            </li>
-            <li class="nav-item">
-              <a href="#" class="nav-link icon-link">
-                <i class="mdi mdi-clock-outline"></i>
-              </a>
+         
             </li>
           </ul>
         </div>
       </nav>
       <!-- partial -->
       <div class="main-panel">
+        <div class="content-wrapper">
        @yield('content')
+        </div>
+      </div>
         <!-- partial:./partials/_footer.html -->
-        <footer class="footer">
+        <footer class="footer" >
           <div class="card">
             <div class="card-body">
               <div class="d-sm-flex justify-content-center justify-content-sm-between">
