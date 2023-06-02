@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\TagsRequest;
+use App\Models\tags\Tag;
 use Illuminate\Http\Request;
 
 class TagsController extends Controller
@@ -13,7 +14,10 @@ class TagsController extends Controller
     public function index()
     {
         //
-        return "tags";
+        $tags=Tag::orderBy('updated_at','desc')->paginate(5);
+       return view('admin.tags.index',[
+        'tags'=>$tags,
+       ]);
     }
 
     /**

@@ -3,8 +3,8 @@
     <html lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
   <!-- Required meta tags -->
- 
-  
+
+
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="csrf-token" content="{{ csrf_token() }}">
@@ -32,7 +32,7 @@
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
         <li class="nav-item">
-            <a class="nav-link" href="pages/icons/mdi.html">
+            <a class="nav-link" href="{{route('tags.index')}}">
               <i class="mdi mdi-emoticon menu-icon"></i>
               <span class="menu-title">Tags</span>
             </a>
@@ -53,12 +53,12 @@
           <button class="navbar-toggler navbar-toggler align-self-center" type="button" data-toggle="minimize">
             <span class="mdi mdi-menu"></span>
           </button>
-         
+
           @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
           <!--<button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
               <img class="h-8 w-8 rounded-full object-cover" src="{{-- Auth::user()->profile_photo_url --}}" alt="{{-- Auth::user()->name --}}" />
           </button>-->
-        
+
           <div class="navbar-brand-wrapper">
             <a class="navbar-brand brand-logo" href="index.html"><img src="{{ Auth::user()->profile_photo_url }}" alt="logo" width="10%" style="border-radius:50%;" /></a>
             <a class="navbar-brand brand-logo-mini" href="index.html"><img src="{{ Auth::user()->profile_photo_url }}" alt="logo" width="10%" style="border-radius:50%;" /></a>
@@ -79,7 +79,7 @@
             <li class="nav-item">
               <h6 class="mb-0 font-weight-bold d-none d-xl-block">{{ date('d-M-Y') }}</h6>
             </li>
-            
+
             <li class="nav-item dropdown mr-1">
               <a class="nav-link count-indicator dropdown-toggle d-flex justify-content-center align-items-center" id="messageDropdown" href="#" data-toggle="dropdown">
                 <i class="mdi mdi-calendar mx-0"></i>
@@ -188,9 +188,9 @@
           </ul>
           <ul class="navbar-nav navbar-nav-right">
             <li class="nav-item nav-profile dropdown">
-             
-                
-               
+
+
+
                 @if (Laravel\Jetstream\Jetstream::managesProfilePhotos())
                 <!--<button class="flex text-sm border-2 border-transparent rounded-full focus:outline-none focus:border-gray-300 transition">
                     <img class="h-8 w-8 rounded-full object-cover" src="{{-- Auth::user()->profile_photo_url --}}" alt="{{-- Auth::user()->name --}}" />
@@ -199,12 +199,12 @@
                    <img src="{{ Auth::user()->profile_photo_url }}"  alt="logo"/></a>
                     <span class="nav-profile-name">{{ Auth::user()->name }}</span>
                 </a>
-                
+
             @else
                 <span class="inline-flex rounded-md">
                     <button type="button" class="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none focus:bg-gray-50 active:bg-gray-50 transition ease-in-out duration-150">
                         {{ Auth::user()->name }}
-    
+
                         <svg class="ml-2 -mr-0.5 h-4 w-4" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor">
                             <path stroke-linecap="round" stroke-linejoin="round" d="M19.5 8.25l-7.5 7.5-7.5-7.5" />
                         </svg>
