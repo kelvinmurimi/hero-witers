@@ -33,13 +33,13 @@
       <ul class="nav">
         <li class="nav-item">
             <a class="nav-link" href="pages/icons/mdi.html">
-              <i class="mdi mdi-emoticon menu-icon"></i>
+              <i class="mdi mdi-arrange-send-to-back"></i>
               <span class="menu-title">Tags</span>
             </a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="pages/icons/mdi.html">
-              <i class="mdi mdi-emoticon menu-icon"></i>
+            <a class="nav-link" href="{{ route('categories.index') }}">
+              <i class="mdi mdi-arrange-bring-to-front"></i>
               <span class="menu-title">Categories</span>
             </a>
           </li>
@@ -243,9 +243,12 @@
       </nav>
       <!-- partial -->
       <div class="main-panel">
+        <div class="content-wrapper">
        @yield('content')
+        </div>
+      </div>
         <!-- partial:./partials/_footer.html -->
-        <footer class="footer">
+        <footer class="footer" >
           <div class="card">
             <div class="card-body">
               <div class="d-sm-flex justify-content-center justify-content-sm-between">
