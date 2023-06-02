@@ -31,12 +31,17 @@
     <!-- partial:./partials/_sidebar.html -->
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
-<<<<<<< HEAD
+
         <li class="nav-item">
             <a class="nav-link" href="{{route('tags.index')}}">
               <i class="mdi mdi-emoticon menu-icon"></i>
-=======
-       
+
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('tags.index')}}">
+              <i class="mdi mdi-emoticon menu-icon"></i>
+
+
           <li class="nav-item">
             <a class="nav-link" href="{{ route('profile.show') }}">
               <i class="mdi mdi-account-circle"></i>::
@@ -47,7 +52,7 @@
            <li class="nav-item">
             <a class="nav-link" href="pages/icons/mdi.html">
               <i class="mdi mdi-arrow-all"></i>::
->>>>>>> 3fdc48e7fbdc9947ba4693a9ae1fc93d056ec893
+
               <span class="menu-title">Tags</span>
             </a>
           </li>
@@ -233,10 +238,10 @@
                   <i class="mdi mdi-settings text-primary"></i>
                   Settings
                 </a>
-              
+
               </div>
             </li>
-         
+
             </li>
           </ul>
         </div>
