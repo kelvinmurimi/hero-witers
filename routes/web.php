@@ -2,6 +2,8 @@
 use App\Http\Controllers;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\catagories\CategoriesController;
+use App\Http\Controllers\plans\PlansController;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 
 
@@ -36,3 +38,9 @@ Route::resource('tags',TagsController::class);
 
 //Categories routes
 Route::resource('categories',CategoriesController::class);
+
+//subscription routes
+Route::group(['prefix'=>'subscriptions'],  function ()
+{
+    Route::get('/',[PlansController::class,'index'])->name('subscriptions.index');
+});

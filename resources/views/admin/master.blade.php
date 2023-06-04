@@ -58,6 +58,10 @@
             </a>
           </li>
 
+
+
+
+          @include('admin.includes.plannav')
       </ul>
     </nav>
     <!-- partial -->
