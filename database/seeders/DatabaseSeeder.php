@@ -22,9 +22,17 @@ class DatabaseSeeder extends Seeder
         // ]);
         $this->call(TagSeeder::class);
         $this->call(CategorySeeder::class);
+
+
+      
+      
+      
         //seed features
         $this->call(FeatureSeeder::class);
         //seed plans
         $this->call(PlanSeeder::class);
+
+        $this->call(GigsTableSeeder::class);
+
     }
 }

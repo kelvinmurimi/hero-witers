@@ -35,7 +35,13 @@
         <li class="nav-item">
             <a class="nav-link" href="{{route('tags.index')}}">
               <i class="mdi mdi-emoticon menu-icon"></i>
-       
+        </li>
+
+        <li class="nav-item">
+            <a class="nav-link" href="{{route('tags.index')}}">
+              <i class="mdi mdi-emoticon menu-icon"></i>
+
+            </li>
           <li class="nav-item">
             <a class="nav-link" href="{{ route('profile.show') }}">
               <i class="mdi mdi-account-circle"></i>::
@@ -44,7 +50,7 @@
           </li>
 
            <li class="nav-item">
-            <a class="nav-link" href="pages/icons/mdi.html">
+            <a class="nav-link" href="{{route('tags.index')}}">
               <i class="mdi mdi-arrow-all"></i>::
 
               <span class="menu-title">Tags</span>
@@ -55,6 +61,12 @@
             <a class="nav-link" href="{{ route('categories.index') }}">
               <i class="mdi mdi-arrow-collapse-horizontal"></i>::
               <span class="menu-title">Categories</span>
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="{{ route('gigs.index') }}">
+              <i class="mdi mdi-comment-check"></i>::
+              <span class="menu-title">Gigs</span>
             </a>
           </li>
 
@@ -236,10 +248,10 @@
                   <i class="mdi mdi-settings text-primary"></i>
                   Settings
                 </a>
-              
+
               </div>
             </li>
-         
+
             </li>
           </ul>
         </div>

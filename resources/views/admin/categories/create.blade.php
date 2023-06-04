@@ -1,4 +1,3 @@
-
 @extends('admin.master')
 
 @section('content')
@@ -8,10 +7,10 @@
         <div class="card">
             <div class="card-body">
                 <h4 class="card-title">Create Category</h4>
-             
+
                 <form class="forms-sample" action="{{ route('categories.store') }}" method="post">
                     @csrf
-                    
+
                     <div class="form-group">
                         <label for="category_name">Category Name</label>
                         <input type="text" class="form-control" id="categoryname" name="category_name">
@@ -29,6 +28,6 @@
         </div>
     </div>
 </div>
-    
+
 @endsection
 
