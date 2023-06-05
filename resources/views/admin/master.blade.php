@@ -25,6 +25,11 @@
   <link rel="stylesheet" href="{{ asset('spicatheme/css/style.css')}}">
   <!-- endinject -->
   <link rel="shortcut icon" href="{{ asset('spicatheme/images/favicon.png')}}" />
+  <style>
+    .nav-link{
+      background-color: red :important;
+    }
+  </style>
 </head>
 <body>
   <div class="container-scroller d-flex">
@@ -32,17 +37,9 @@
     <nav class="sidebar sidebar-offcanvas" id="sidebar">
       <ul class="nav">
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('tags.index')}}">
-              <i class="mdi mdi-emoticon menu-icon"></i>
-        </li>
+       
 
-        <li class="nav-item">
-            <a class="nav-link" href="{{route('tags.index')}}">
-              <i class="mdi mdi-emoticon menu-icon"></i>
-
-            </li>
-          <li class="nav-item">
+       <li class="nav-item">
             <a class="nav-link" href="{{ route('profile.show') }}">
               <i class="mdi mdi-account-circle"></i>::
               <span class="menu-title">Profile</span>

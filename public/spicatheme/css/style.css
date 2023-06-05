@@ -12603,7 +12603,7 @@ input[type="button"].btn-block {
 .nav-pills .nav-link.active,
 .nav-pills .show > .nav-link {
   color: #fff;
-  background-color: #007bff;
+  background-color: #ff7403;
 }
 
 .nav-fill > .nav-link,
@@ -20627,7 +20627,7 @@ dl li {
 }
 
 .sidebar .nav .nav-item.active > .nav-link {
-  background: #183188;
+  background: #ffaf03;
   position: relative;
 }
 
