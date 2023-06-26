@@ -2,6 +2,8 @@
 use App\Http\Controllers;
 use App\Http\Controllers\TagsController;
 use App\Http\Controllers\catagories\CategoriesController;
+use App\Http\Controllers\plans\PlansController;
+use Illuminate\Routing\RouteGroup;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\GigsController;
 
@@ -36,8 +38,18 @@ Route::resource('tags',TagsController::class);
 
 //Categories routes
 Route::resource('categories',CategoriesController::class);
+
+//subscription routes
+Route::group(['prefix'=>'subscriptions'],  function ()
+{
+    Route::get('/',[PlansController::class,'index'])->name('subscriptions.index');
+});
+
+
+
 //Gigs Routes
 Route::prefix('gigs')->group(function () {
     Route::get('/',[GigsController::class,'index'])->name('gigs.index');
     Route::get('/create',[GigsController::class,'create'])->name('gigs.create');
 });
+

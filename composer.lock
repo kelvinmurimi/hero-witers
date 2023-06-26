@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "7778e010ebc14506c97a4bf012a21b52",
+    "content-hash": "18d6c525a2cc2dbc074981282d642c70",
     "packages": [
         {
             "name": "bacon/bacon-qr-code",
@@ -2204,6 +2204,75 @@
                 }
             ],
             "time": "2023-03-03T20:12:38+00:00"
+        },
+        {
+            "name": "lucasdotvin/laravel-soulbscription",
+            "version": "4.0.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lucasdotvin/laravel-soulbscription.git",
+                "reference": "25d327c5ee383cce6fa0b157d410d09b97da4f4b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lucasdotvin/laravel-soulbscription/zipball/25d327c5ee383cce6fa0b157d410d09b97da4f4b",
+                "reference": "25d327c5ee383cce6fa0b157d410d09b97da4f4b",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/contracts": "^8.0|^9.0|^10.0",
+                "php": "^8.0|^8.1"
+            },
+            "require-dev": {
+                "orchestra/testbench": "^6.22|^7.0|^8.0",
+                "phpunit/phpunit": "^9.5|^10.0",
+                "squizlabs/php_codesniffer": "*"
+            },
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "LucasDotVin\\Soulbscription\\SoulbscriptionServiceProvider"
+                    ],
+                    "aliases": []
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "LucasDotVin\\Soulbscription\\": "src",
+                    "LucasDotVin\\Soulbscription\\Database\\Factories\\": "database/factories"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Lucas Vinicius",
+                    "email": "lucasvinicius211@yahoo.com",
+                    "role": "Developer"
+                }
+            ],
+            "description": "A straightforward interface to handle subscriptions and features consumption.",
+            "homepage": "https://github.com/lucasdotvin/laravel-soulbscription",
+            "keywords": [
+                "laravel",
+                "laravel-soulbscription",
+                "lucasdotvin",
+                "subscriptions"
+            ],
+            "support": {
+                "issues": "https://github.com/lucasdotvin/laravel-soulbscription/issues",
+                "source": "https://github.com/lucasdotvin/laravel-soulbscription/tree/4.0.0"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/lucasdotvin",
+                    "type": "github"
+                }
+            ],
+            "time": "2023-04-07T14:45:51+00:00"
         },
         {
             "name": "mobiledetect/mobiledetectlib",
