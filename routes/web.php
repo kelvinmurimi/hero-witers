@@ -43,6 +43,7 @@ Route::resource('categories',CategoriesController::class);
 Route::group(['prefix'=>'subscriptions'],  function ()
 {
     Route::get('/',[PlansController::class,'index'])->name('subscriptions.index');
+    Route::post('/store',[PlansController::class,'store'])->name('subscriptions.store');
 });
 
 
