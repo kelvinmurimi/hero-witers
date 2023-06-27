@@ -1,0 +1,11 @@
+C-create get
+
+R-read get
+U -update post
+D-delete post
+
+route post '/gigs/create'
+M - model-database schema
+V - view-blade files vue react nextjs
+C- controller ->logic,functions index create store update delete show
+index-display all table rows
