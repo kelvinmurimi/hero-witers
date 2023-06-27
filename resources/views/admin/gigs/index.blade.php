@@ -28,9 +28,9 @@
 
                                     <td>{{ $gig->id }}</td>
                                     <td>{{ $gig->gig_title }}</td>
-                                    <td><a href=""class="btn btn-primary">Edit</a></td>
+                                    <td><a href="{{ route('gigs.edit',$gig->id) }}"class="btn btn-primary">Edit</a></td>
                                     <td>
-                                        <form action="" class="btn btn-danger" method="post">
+                                        <form action="{{ route('gigs.destroy',$gig->id) }}" class="btn btn-danger" method="post">
                                             @method('delete')
                                             @csrf
                                             <input type="submit" value="delete">
