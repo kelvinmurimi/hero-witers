@@ -13,7 +13,7 @@ class TagsController extends Controller
      */
     public function index()
     {
-        //
+        
         $tags=Tag::orderBy('updated_at','desc')->paginate(5);
        return view('admin.tags.index',[
         'tags'=>$tags,
@@ -25,7 +25,7 @@ class TagsController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.tags.create');
     }
 
     /**
@@ -33,7 +33,16 @@ class TagsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $request->validate([
+
+            'id' => 'required',
+            'name' => 'required',
+           
+
+        ]);
+        Tag::create($request->all());
+        return redirect()->route('tag.index')
+            ->with('success', 'tag created successfully.');
     }
 
     /**
@@ -41,7 +50,7 @@ class TagsController extends Controller
      */
     public function show(string $id)
     {
-        //
+       // return view('admin.tags.show', compact('tags'));
     }
 
     /**
@@ -49,15 +58,23 @@ class TagsController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        return view('admin.tags.edit',compact('tags'));
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(Request $request, Tag $tag)
     {
-        //
+        $request->validate([
+
+            'id' => 'required',
+            'name' => 'required',
+        
+        ]);
+        $tag->update($request->all());
+        return redirect()->route('tag.index')
+            ->with('success', 'Tag updated successfully');
     }
 
     /**
@@ -65,6 +82,9 @@ class TagsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $tags = Tag::findOrFail($id);
+        $tags->delete();
+        return redirect()->route('tags.index')
+            ->with('success', 'Tag deleted successfully');
     }
 }
